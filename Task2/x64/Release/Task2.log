@@ -1,0 +1,16 @@
+﻿  main.c
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(26,16): warning C4477: "scanf_s": в строке форматирования "%s" требуется аргумент типа "char *", но вариативный аргумент "1" имеет тип "const char (*)[1024]"
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(26,16): message : этот аргумент используется описателем преобразования
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(30,15): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(33,3): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(40,20): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(45,23): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(21,1): warning C4133: инициализация: несовместимые типы - из "void **" в "const char **"
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(38,1): warning C4267: инициализация: преобразование из "size_t" в "int"; возможна потеря данных
+C:\Users\aqua\source\repos\C_Class7\Task2\main.c(20,11): warning C4101: input_buffer: неиспользованная локальная переменная
+  Создание кода
+  0 of 20 functions ( 0.0%) were compiled, the rest were copied from previous compilation.
+    0 functions were new in current compilation
+    0 functions had inline decision re-evaluated but remain unchanged
+  Создание кода завершено
+  Task2.vcxproj -> C:\Users\aqua\source\repos\C_Class7\x64\Release\Task2.exe
