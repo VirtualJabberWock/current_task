@@ -1,0 +1,8 @@
+﻿  Storage.c
+C:\Users\aqua\source\repos\C_Class7\Task1\aquaLib\Storage.c(45,31): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task1\aquaLib\Storage.c(63,33): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task1\aquaLib\Storage.c(63,61): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task1\aquaLib\Storage.c(92,31): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aqua\source\repos\C_Class7\Task1\aquaLib\Storage.c(93,36): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\aqua\source\repos\C_Class7\Task1\aquaLib\Storage.c(7): warning C4716: __handle__: должна возвращать значение
+  Task1.vcxproj -> C:\Users\aqua\source\repos\C_Class7\x64\Debug\Task1.exe
