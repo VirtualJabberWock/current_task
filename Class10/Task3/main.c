@@ -42,7 +42,7 @@ string invertCase(string str) {
 	char* a = initArray(len, sizeof(char));
 	for (int i = 0; i < len; i++) {
 		char c = str[i];
-		a[i] = (c^' ')*(((c>'@')&(c<'['))|((c>'`')&(c<'{')));
+		a[i] = ' '*(((c>'@')&(c<'['))|((c>'`')&(c<'{')))^c;
 	}
 	return buildString(a, len);
 }

@@ -15,6 +15,7 @@ string SUS_clearDublicateSpaces(string str)
 	}
 	return buildString(buf, buf_len);
 }
+;
 
 int SUS_getStringLength(string str)
 {
