@@ -1,3 +1,0 @@
-﻿  main.c
-C:\Users\user\source\repos\current_task\10_Task1\main.c(11,9): warning C4013: exit: нет определения; предполагается "extern" с возвратом типа "int"
-  10_Task1.vcxproj -> C:\Users\user\source\repos\current_task\x64\Debug\10_Task1.exe
