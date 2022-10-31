@@ -10,6 +10,7 @@ void handleCommand(string input_);
 int handlePoint(string cmd, string input_);
 void showHelp();
 void doCalc();
+int calcStack();
 void goBack();
 
 #define ERR_BAD_POINT_FORMAT "Bad point format. You can do it like (x,y) or (x, y) or {x, y} or x, y"
@@ -23,6 +24,7 @@ void showHelp()
 	printf("    'move (x, y)' - step forward to point and expand current path\n");
 	printf("    'back' - step back to previous path tail\n");
 	printf("    'calc' - calculate length of current path\n");
+	printf("    'return' - do calc but free stack, and return to 0 point\n");
 	printf("    'help' - for help\n");
 	printf("    'exit' - exit\n");
 	printf("    \n");
@@ -57,6 +59,10 @@ void handleCommand(string input_) {
 	}
 	if (!strcmp(input_, "calc")) {
 		doCalc();
+		return;
+	}
+	if (!strcmp(input_, "return")) {
+		calcStack();
 		return;
 	}
 	
@@ -109,6 +115,22 @@ void goBack() {
 	else {
 		printf("Empty history");
 	}
+}
+
+int calcStack() {
+
+	if (__ps.w_top == 0) return printf("Null path!");
+	if (__ps.w_top == 1) return printf("Current path length = 0");
+	double result = 0;
+	Point peek, curr;
+
+	while(!currentPath.isEmpty(&__ps)) {
+		curr = currentPath.pop(&__ps);
+		peek = currentPath.peek(&__ps);
+		result += DefaultPoint.distanceTo(&curr, &peek);
+	}
+
+	printf("Current path length = %.5lf\nPath disposed [0/0]", result);
 }
 
 void doCalc()

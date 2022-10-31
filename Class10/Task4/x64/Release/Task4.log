@@ -1,9 +1,9 @@
-﻿  Stack.c
-C:\Users\aqua\source\repos\Class10\Task4\Stack.c(39,25): warning C4047: функция: "tagPointStack *" отличается по уровням косвенного обращения от "tagPointStack **"
-C:\Users\aqua\source\repos\Class10\Task4\Stack.c(39,20): warning C4024: функция по указателю: различные типы для формального и фактического параметров 1
+﻿  main.c
+C:\Users\aqua\source\repos\Class10\Task4\main.c(44,12): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
   Создание кода
-  3 of 40 functions ( 7.5%) were compiled, the rest were copied from previous compilation.
+C:\Users\aqua\source\repos\Class10\Task4\main.c(134): warning C4715: calcStack: значение возвращается не при всех путях выполнения
+  2 of 41 functions ( 4.9%) were compiled, the rest were copied from previous compilation.
     0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
+    1 functions had inline decision re-evaluated but remain unchanged
   Создание кода завершено
   Task4.vcxproj -> C:\Users\aqua\source\repos\Class10\x64\Release\Task4.exe
