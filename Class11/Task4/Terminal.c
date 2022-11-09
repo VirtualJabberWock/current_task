@@ -1,10 +1,11 @@
 #include "Terminal.h"
 #include "AquaDBMS.h"
 #include "AquaCrypto.h"
+#include "..\aquaUtils\pch.h"
 
 string getPasswordFromUser() {
     char c;
-    char* password = initArray(100, sizeof(char));
+    char* password = (char*)initArray(100, sizeof(char));
     int i = 0;
     do {
         c = getch();
@@ -15,6 +16,29 @@ string getPasswordFromUser() {
         if (i > 99) break;
     } while ((c != '\n') && (c != '\r'));
     return buildString(password, 100);
+}
+
+string getLoginFromUser() {
+    char c;
+    char* password = (char*)initArray(256, sizeof(char));
+    int i = 0;
+    do { 
+        c = getch();
+        if (c == '\n' || c == '\r') break;
+        if (c == '\b') {
+            printf("\b");
+            i = min(i-1, 0);
+            continue;
+        }
+        password[i] = c;
+        printf("%c", c);
+        if ((i+1) % 4 == 0) {
+            printf(" ");
+        }
+        i++;
+        if (i > 255) break;
+    } while ((c != '\n') && (c != '\r'));
+    return buildString(password, 256);
 }
 
 

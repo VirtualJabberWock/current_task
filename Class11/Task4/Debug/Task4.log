@@ -1,12 +1,19 @@
-﻿  Terminal.c
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(954,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
-C:\Users\aquahaze\source\Class11\aquaUtils\FileUtils.h(13): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
-C:\Users\aquahaze\source\Class11\Task4\AquaCrypto.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\aquahaze\source\Class11\Task4\Terminal.c(10,13): warning C4013: getch: нет определения; предполагается "extern" с возвратом типа "int"
-  main.c
-C:\Users\aquahaze\source\Class11\Task4\AquaCrypto.h(3,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(954,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
-C:\Users\aquahaze\source\Class11\aquaUtils\FileUtils.h(13): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
-C:\Users\aquahaze\source\Class11\Task4\main.c(17,2): warning C4013: getcwd: нет определения; предполагается "extern" с возвратом типа "int"
-  Создание кода...
-  Task4.vcxproj -> C:\Users\aquahaze\source\Class11\Debug\Task4.exe
+﻿  AquaDBMS.c
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(950,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
+C:\Users\user\source\repos\current_task\Class11\aquaUtils\FileUtils.h(13): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
+C:\Users\user\source\repos\current_task\Class11\Task4\ExtendedUtils.h(12,20): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(12,45): warning C4028: формальный параметр 3 отличается от объявления
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(33,9): warning C4133: функция: несовместимые типы - из "const char *" в "LPCWSTR"
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(35,46): warning C4133: функция: несовместимые типы - из "const char *" в "LPCWSTR"
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(117,52): warning C4047: =: "int" отличается по уровням косвенного обращения от "char *"
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(124,20): warning C4018: <=: несоответствие типов со знаком и без знака
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(143,22): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(173,52): warning C4047: =: "int" отличается по уровням косвенного обращения от "char *"
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(188,67): warning C4033: "AQUADB_Private_ScanForTables" должен возвращать значение
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(200,22): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(211,56): warning C4098: AQUADB_Private_Insert: функция типа "void", возвращающая значение
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(212,58): warning C4098: AQUADB_Private_Insert: функция типа "void", возвращающая значение
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(218,52): warning C4047: =: "int" отличается по уровням косвенного обращения от "char *"
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(235,13): warning C4098: AQUADB_Private_Insert: функция типа "void", возвращающая значение
+C:\Users\user\source\repos\current_task\Class11\Task4\AquaDBMS.c(205): warning C4715: AQUADB_Private_ScanForTables: значение возвращается не при всех путях выполнения
+  Task4.vcxproj -> C:\Users\user\source\repos\current_task\Class11\Debug\Task4.exe

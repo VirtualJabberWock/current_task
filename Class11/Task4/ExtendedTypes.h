@@ -10,7 +10,7 @@
 
 #define ERR_KEY_DONT_EXIST -1
 #define ERR_NO 0
-#define DEBUG_MODE 1
+#define DEBUG_MODE 0
 
 typedef struct tagHashNode {
 

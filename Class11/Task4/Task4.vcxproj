@@ -29,7 +29,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
@@ -48,7 +48,7 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v143</PlatformToolset>
+    <PlatformToolset>v142</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -139,11 +139,11 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\AquaTypes.c" />
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\ArrayUtils.c" />
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\DebugUtils.c" />
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\FileUtils.c" />
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\StringUtils.c" />
+    <ClCompile Include="..\aquaUtils\AquaTypes.c" />
+    <ClCompile Include="..\aquaUtils\ArrayUtils.c" />
+    <ClCompile Include="..\aquaUtils\DebugUtils.c" />
+    <ClCompile Include="..\aquaUtils\FileUtils.c" />
+    <ClCompile Include="..\aquaUtils\StringUtils.c" />
     <ClCompile Include="AquaCrypto.c" />
     <ClCompile Include="AquaDBMS.c" />
     <ClCompile Include="CryptoField.c" />
@@ -156,12 +156,12 @@
     <ClCompile Include="User.c" />
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\AquaTypes.h" />
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\ArrayUtils.h" />
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\DebugUtils.h" />
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\FileUtils.h" />
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\pch.h" />
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\StringUtils.h" />
+    <ClInclude Include="..\aquaUtils\AquaTypes.h" />
+    <ClInclude Include="..\aquaUtils\ArrayUtils.h" />
+    <ClInclude Include="..\aquaUtils\DebugUtils.h" />
+    <ClInclude Include="..\aquaUtils\FileUtils.h" />
+    <ClInclude Include="..\aquaUtils\pch.h" />
+    <ClInclude Include="..\aquaUtils\StringUtils.h" />
     <ClInclude Include="AquaCrypto.h" />
     <ClInclude Include="AquaDBMS.h" />
     <ClInclude Include="CryptoField.h" />

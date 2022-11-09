@@ -33,21 +33,6 @@
     <ClCompile Include="main.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\AquaTypes.c">
-      <Filter>aquaUtils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\ArrayUtils.c">
-      <Filter>aquaUtils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\DebugUtils.c">
-      <Filter>aquaUtils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\FileUtils.c">
-      <Filter>aquaUtils</Filter>
-    </ClCompile>
-    <ClCompile Include="..\..\current_task\Class10\aquaUtils\StringUtils.c">
-      <Filter>aquaUtils</Filter>
-    </ClCompile>
     <ClCompile Include="CryptoField.c">
       <Filter>Исходные файлы\crypto</Filter>
     </ClCompile>
@@ -66,26 +51,23 @@
     <ClCompile Include="Terminal.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
+    <ClCompile Include="..\aquaUtils\ArrayUtils.c">
+      <Filter>aquaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aquaUtils\DebugUtils.c">
+      <Filter>aquaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aquaUtils\FileUtils.c">
+      <Filter>aquaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aquaUtils\StringUtils.c">
+      <Filter>aquaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\aquaUtils\AquaTypes.c">
+      <Filter>aquaUtils</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\AquaTypes.h">
-      <Filter>aquaUtils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\ArrayUtils.h">
-      <Filter>aquaUtils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\DebugUtils.h">
-      <Filter>aquaUtils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\FileUtils.h">
-      <Filter>aquaUtils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\pch.h">
-      <Filter>aquaUtils</Filter>
-    </ClInclude>
-    <ClInclude Include="..\..\current_task\Class10\aquaUtils\StringUtils.h">
-      <Filter>aquaUtils</Filter>
-    </ClInclude>
     <ClInclude Include="AquaCrypto.h">
       <Filter>Исходные файлы\crypto</Filter>
     </ClInclude>
@@ -106,6 +88,24 @@
     </ClInclude>
     <ClInclude Include="Terminal.h">
       <Filter>Файлы заголовков</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aquaUtils\AquaTypes.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aquaUtils\ArrayUtils.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aquaUtils\DebugUtils.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aquaUtils\FileUtils.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aquaUtils\pch.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\aquaUtils\StringUtils.h">
+      <Filter>aquaUtils</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

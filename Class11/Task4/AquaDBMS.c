@@ -179,10 +179,10 @@ int AQUADB_Private_ScanForTables(__AquaDBSelf__) {
         if (s == 0) break;
         string line_str = buildLine(buffer, 2048);
         if (strstr(line_str, "table") != 0) {
-            StringVP sv = NewStringV();
-            sv->ptr = SUS_split(line_str, ':', &sv->size);
-            if (sv->size != 2) invalid();
-            string tmp0 = sv->ptr[1];
+            StringV sv; InitStringV(&sv);
+            sv.ptr = SUS_split(line_str, ':', &sv.size);
+            if (sv.size != 2) invalid();
+            string tmp0 = sv.ptr[1];
             self->tables_c++;
             Table* tmp = (Table*)realloc(self->tables, sizeof(Table) * self->tables_c);
             if (tmp == NULL) { panic("Memory allocation error!"); return; }

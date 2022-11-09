@@ -4,6 +4,7 @@
 #include "AquaDBMS.h"
 
 string getPasswordFromUser();
+string getLoginFromUser();
 
 /*
 @return 1 - if success, 0 - if error
