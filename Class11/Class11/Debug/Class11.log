@@ -1,0 +1,4 @@
+﻿main.obj : error LNK2019: ссылка на неразрешенный внешний символ _SUS_getStringLength в функции _checkForAnagram.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _panic в функции _main.
+main.obj : error LNK2019: ссылка на неразрешенный внешний символ _initArray в функции _checkForAnagram.
+C:\Users\aqua\source\repos\Class11\Debug\Task2.exe : fatal error LNK1120: неразрешенных внешних элементов: 3
