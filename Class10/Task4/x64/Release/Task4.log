@@ -1,0 +1,39 @@
+﻿  AquaTypes.c
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(23,37): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(61,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(116,1): warning C4090: инициализация: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(143,35): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(143,61): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(166,24): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(166,39): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(177,75): warning C4133: функция: несовместимые типы - из "LongV *" в "IntV *"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(178,77): warning C4133: функция: несовместимые типы - из "StringV *" в "IntV *"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(179,77): warning C4133: функция: несовместимые типы - из "DoubleV *" в "IntV *"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(201,19): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(202,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\AquaTypes.c(218,35): warning C4090: =: разные квалификаторы "const"
+  ArrayUtils.c
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\ArrayUtils.c(22,22): warning C4133: функция: несовместимые типы - из "int **" в "char **"
+  DebugUtils.c
+  FileUtils.c
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\FileUtils.c(31,43): warning C4098: readAllLines_s: функция типа "void", возвращающая значение
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\FileUtils.c(35,39): warning C4047: =: "int" отличается по уровням косвенного обращения от "char *"
+  StringUtils.c
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\StringUtils.c(205,20): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\StringUtils.c(206,19): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\StringUtils.c(206,61): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\StringUtils.c(214,18): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\StringUtils.c(215,17): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\Class10\aquaUtils\StringUtils.c(215,59): warning C4090: функция: разные квалификаторы "const"
+  IPoint.c
+  main.c
+C:\Users\user\source\repos\current_task\Class10\Task4\main.c(44,12): warning C4013: gets: нет определения; предполагается "extern" с возвратом типа "int"
+  Stack.c
+C:\Users\user\source\repos\current_task\Class10\Task4\Stack.c(40,25): warning C4047: функция: "tagPointStack *" отличается по уровням косвенного обращения от "tagPointStack **"
+C:\Users\user\source\repos\current_task\Class10\Task4\Stack.c(40,20): warning C4024: функция по указателю: различные типы для формального и фактического параметров 1
+  Previous IPDB not found, fall back to full compilation.
+  Создание кода
+C:\Users\user\source\repos\current_task\Class10\Task4\main.c(135): warning C4715: calcStack: значение возвращается не при всех путях выполнения
+  All 42 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  Task4.vcxproj -> C:\Users\user\source\repos\current_task\Class10\x64\Release\Task4.exe
