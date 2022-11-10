@@ -13,13 +13,13 @@ int main(int argc, string* argv) {
 	int base_len = strlen(argv[1]);
 	int s = 0;
 
-	do {		
+	while(1) {
 		printf("\nEnter a string:\n> ");
 		s = checkForAnagram(gets_s(buf, 512),argv[1], base_len);
+		if ((char)buf[0] == 0) break;
 		if (s) printf("True!");
 		else printf("False!");
-	} while (((char)buf[0]) != 0);
-	 
+	}
 }
 
 int checkForAnagram(string word, string base, int b_len)

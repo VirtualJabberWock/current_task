@@ -1,4 +1,5 @@
 table:users
-obj=true;name=Sam;surname=Sepiol;credentials=0157143164141154;balance=0;psw_hash=3d9ac31004c79e083f1ae71185cd95767226ba5185090049fd65026a731389ea
-obj=true;name=Nathan;surname=Merrill;credentials=0147151162164150;balance=0;psw_hash=aeefc8ed6a9f13d5f4d57187520b714759db665fe0ea36b59278f706083dab71
+obj=true;name=Sam;surname=Sepiol;credentials=0157143164141154;balance=6068766;cash=6357;phone_balance=0;psw_hash=3d9ac31004c79e083f1ae71185cd95767226ba5185090049fd65026a731389ea
+obj=true;name=Nathan;surname=Merrill;credentials=0147151162164150;balance=0;cash=20000;phone_b=0;psw_hash=aeefc8ed6a9f13d5f4d57187520b714759db665fe0ea36b59278f706083dab71
+obj=true;name=Steve;surname=Stevenson;credentials=0000111122223333;balance=10;cash=99999999999;phone_b=0;psw_hash=null
 end

@@ -48,9 +48,6 @@
     <ClCompile Include="User.c">
       <Filter>Исходные файлы</Filter>
     </ClCompile>
-    <ClCompile Include="Terminal.c">
-      <Filter>Исходные файлы</Filter>
-    </ClCompile>
     <ClCompile Include="..\aquaUtils\ArrayUtils.c">
       <Filter>aquaUtils</Filter>
     </ClCompile>
@@ -65,6 +62,9 @@
     </ClCompile>
     <ClCompile Include="..\aquaUtils\AquaTypes.c">
       <Filter>aquaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="Terminal.c">
+      <Filter>Исходные файлы\terminal</Filter>
     </ClCompile>
   </ItemGroup>
   <ItemGroup>
@@ -86,9 +86,6 @@
     <ClInclude Include="ExtendedUtils.h">
       <Filter>Исходные файлы\extend</Filter>
     </ClInclude>
-    <ClInclude Include="Terminal.h">
-      <Filter>Файлы заголовков</Filter>
-    </ClInclude>
     <ClInclude Include="..\aquaUtils\AquaTypes.h">
       <Filter>aquaUtils</Filter>
     </ClInclude>
@@ -106,6 +103,12 @@
     </ClInclude>
     <ClInclude Include="..\aquaUtils\StringUtils.h">
       <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="Terminal.h">
+      <Filter>Исходные файлы\terminal</Filter>
+    </ClInclude>
+    <ClInclude Include="Core.h">
+      <Filter>Исходные файлы\terminal</Filter>
     </ClInclude>
   </ItemGroup>
   <ItemGroup>

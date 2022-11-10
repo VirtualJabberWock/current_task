@@ -10,7 +10,7 @@
 
 #define ERR_KEY_DONT_EXIST -1
 #define ERR_NO 0
-#define DEBUG_MODE 0
+#define DEBUG_MODE 1
 
 typedef struct tagHashNode {
 
@@ -35,8 +35,8 @@ typedef struct tagHashMap {
 
 typedef struct tagDataBox {
 
-	StringVP kv;
-	StringVP vv;
+	StringV kv;
+	StringV vv;
 
 } DataBox;
 

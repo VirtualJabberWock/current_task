@@ -29,8 +29,8 @@ void InitHashMap(HashMap* map)
 
 void InitDataBox(DataBox* dB)
 {
-	dB->kv = NewStringV();
-	dB->vv = NewStringV();
+	InitStringV(&(dB->kv));
+	InitStringV(&(dB->vv));
 }
 
 void HASHMAP_Default_put(__HMSelf__, lc_string key, string value){
