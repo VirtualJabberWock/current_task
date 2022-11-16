@@ -133,9 +133,12 @@
     <ClInclude Include="..\..\aquaUtils\FileUtils.h" />
     <ClInclude Include="..\..\aquaUtils\pch.h" />
     <ClInclude Include="..\..\aquaUtils\StringUtils.h" />
+    <ClInclude Include="BareissAlgorithm.h" />
     <ClInclude Include="bool.h" />
     <ClInclude Include="ExtendedTypes.h" />
     <ClInclude Include="Matrices.h" />
+    <ClInclude Include="MatrixCalculator.h" />
+    <ClInclude Include="MatrixDisplay.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\aquaUtils\AquaTypes.c" />

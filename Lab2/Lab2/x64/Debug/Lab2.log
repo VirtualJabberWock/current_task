@@ -1,53 +1,9 @@
-﻿  AquaTypes.c
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(23,37): warning C4133: =: несовместимые типы - из "void **" в "const char **"
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(61,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(143,61): warning C4090: функция: разные квалификаторы "const"
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(166,39): warning C4090: функция: разные квалификаторы "const"
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(202,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(218,35): warning C4090: =: разные квалификаторы "const"
-  ArrayUtils.c
-C:\Users\aquahaze\source\current_task\aquaUtils\ArrayUtils.c(22,22): warning C4133: функция: несовместимые типы - из "int **" в "char **"
-  DebugUtils.c
-  FileUtils.c
-C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.c(31,43): warning C4098: readAllLines_s: функция типа "void", возвращающая значение
-C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.c(35,39): warning C4047: =: "int" отличается по уровням косвенного обращения от "char *"
-  StringUtils.c
-C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(169,20): warning C4090: функция: разные квалификаторы "const"
-C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(170,59): warning C4090: функция: разные квалификаторы "const"
-C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(178,18): warning C4090: функция: разные квалификаторы "const"
-C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(179,57): warning C4090: функция: разные квалификаторы "const"
-  ExtendedTypes.c
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.h(12,21): error C2020: __notnull__: переопределение члена "struct"
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(16,28): warning C4047: функция: "void ***" отличается по уровням косвенного обращения от "StringV **"
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(16,18): warning C4022: pushToBucket: несоответствие указателя для фактического параметра 1
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(16,40): warning C4047: функция: "int *" отличается по уровням косвенного обращения от "int"
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(16,34): warning C4024: pushToBucket: различные типы для формального и фактического параметров 2
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(24,25): warning C4047: функция: "void **" отличается по уровням косвенного обращения от "StringV *"
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(24,20): warning C4022: freeBucket: несоответствие указателя для фактического параметра 1
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(24,28): error C2065: v: необъявленный идентификатор
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(24,30): error C2223: выражение слева от "->size" должно указывать на структуру или объединение
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(24,5): error C2198: freeBucket: слишком мало аргументов для вызова
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(25,6): error C2065: v: необъявленный идентификатор
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(25,8): error C2223: выражение слева от "->ptr" должно указывать на структуру или объединение
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(26,6): error C2065: v: необъявленный идентификатор
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(26,8): error C2223: выражение слева от "->size" должно указывать на структуру или объединение
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\ExtendedTypes.c(21): fatal  error C1075: "{": не найдена несоответствующая лексема
-  Matrices.c
+﻿  Matrices.c
 C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(18,31): warning C4033: "MatrixAddition" должен возвращать значение
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(19,31): warning C4033: "MatrixAddition" должен возвращать значение
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(24,37): warning C4033: "MatrixAddition" должен возвращать значение
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(25,37): warning C4033: "MatrixAddition" должен возвращать значение
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(44,5): error C2059: синтаксическая ошибка: for
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(44,23): error C2065: i: необъявленный идентификатор
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(44,23): warning C4552: "<": результат выражения не используется
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(44,36): error C2065: i: необъявленный идентификатор
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(44,38): error C2143: синтаксическая ошибка: отсутствие ";" перед ")"
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(45,27): error C2065: j: необъявленный идентификатор
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(45,27): warning C4552: "<": результат выражения не используется
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(45,40): error C2065: j: необъявленный идентификатор
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(45,42): error C2143: синтаксическая ошибка: отсутствие ";" перед ")"
-C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(48,5): error C2059: синтаксическая ошибка: }
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(954,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
+C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.h(13,1): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.c(13,51): warning C4133: =: несовместимые типы - из "int **" в "double **"
+  main.c
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
   Создание кода...
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(52): warning C4172: возвращение адреса локальной или временной переменной : iv
-C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(45): warning C4172: возвращение адреса локальной или временной переменной : sv
+  Lab2.vcxproj -> C:\Users\aquahaze\source\current_task\Lab2\x64\Debug\Lab2.exe
