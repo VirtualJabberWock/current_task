@@ -138,7 +138,7 @@
     <ClInclude Include="ExtendedTypes.h" />
     <ClInclude Include="Matrices.h" />
     <ClInclude Include="MatrixCalculator.h" />
-    <ClInclude Include="MatrixDisplay.h" />
+    <ClInclude Include="MatrixIO.h" />
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="..\..\aquaUtils\AquaTypes.c" />

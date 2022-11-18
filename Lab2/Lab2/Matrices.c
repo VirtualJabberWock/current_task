@@ -10,7 +10,7 @@ void InitMatrix(Matrix* m, int w, int h)
     m->__notnull__ = true;
     m->h = h;
     m->w = w;
-    m->matrix = (int**)initArray(h, sizeof(void*));
+    m->matrix = (double**)initArray(h, sizeof(void*));
     for (int i = 0; i < h; i++) {
         m->matrix[i] = (double*)initArray(w, sizeof(double));
     }
