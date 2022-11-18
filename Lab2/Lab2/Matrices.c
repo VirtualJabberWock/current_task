@@ -10,7 +10,7 @@ void InitMatrix(Matrix* m, int w, int h)
     m->__notnull__ = true;
     m->h = h;
     m->w = w;
-    m->matrix = (int**)initArray(h, sizeof(void*));
+    m->matrix = (double**)initArray(h, sizeof(void*));
     for (int i = 0; i < h; i++) {
         m->matrix[i] = (double*)initArray(w, sizeof(double));
     }
@@ -22,6 +22,16 @@ void MatrixFrom3x3(Matrix* m, double A[3][3])
     if (m->w != 3) panic("Can't create 3x3 matrix given nxm, where m != 3");
     for (int i = 0; i < 3; i++) {
         for (int j = 0; j < 3; j++) {
+            m->matrix[i][j] = A[i][j];
+        }
+    }
+}
+
+void MatrixFrom5x5(Matrix* m, double A[5][5]) {
+    if (m->h != 5) panic("Can't create 5x5 matrix given nxm, where n != 5");
+    if (m->w != 5) panic("Can't create 5x5 matrix given nxm, where m != 5");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
             m->matrix[i][j] = A[i][j];
         }
     }
@@ -155,8 +165,8 @@ void MatrixErrorHandler(int status)
 
 Bool _MatrixCheckForSameSize(Matrix* A, Matrix* B)
 {
-    if (A->h != A->h) return False;
-    if (A->w != A->w) return False;
+    if (A->h != B->h) return False;
+    if (A->w != B->w) return False;
     return True;
 }
 
@@ -189,8 +199,8 @@ void MatrixSmartPrint(string format, int c, ...) {
             panic("MatrixSmartPrint :: Every matrix should have same size!");
     }
     for (int j = 0; j < last_size; j++) {
-        for (int k = 0; k < c; k++) {
-            if (j != c / 2) {
+        for (int k = 0; k < c + 1; k++) {
+            if (j != last_size / 2) {
                 for (int i = 0; i < SUS_getStringLength(sv.ptr[k]); i++) printf(" ");
             }
             else {
@@ -198,7 +208,7 @@ void MatrixSmartPrint(string format, int c, ...) {
             }
             printf(" ");
             for (int i = 0; i < last_size; i++) {
-                printf("%2d  ", (int)arr[k].matrix[j][i]);
+                if(k != c) printf("%2d  ", (int)arr[k].matrix[j][i]);
             }
         }
         printf("\n");

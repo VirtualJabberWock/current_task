@@ -16,7 +16,7 @@ void* __map_v[OPERATIONS_COUNT] = {
     MatrixDeterminate
 };
 
-#include "MatrixDisplay.h"
+#include "MatrixIO.h"
 
 /*
 @param

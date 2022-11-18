@@ -51,7 +51,7 @@
     <ClInclude Include="MatrixCalculator.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
-    <ClInclude Include="MatrixDisplay.h">
+    <ClInclude Include="MatrixIO.h">
       <Filter>Файлы заголовков</Filter>
     </ClInclude>
   </ItemGroup>

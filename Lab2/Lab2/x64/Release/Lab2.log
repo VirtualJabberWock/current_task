@@ -1,0 +1,37 @@
+﻿  AquaTypes.c
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(23,37): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(61,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(116,1): warning C4090: инициализация: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(143,35): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(143,61): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(166,24): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(166,39): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(201,19): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(202,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\user\source\repos\current_task\aquaUtils\AquaTypes.c(218,35): warning C4090: =: разные квалификаторы "const"
+  ArrayUtils.c
+C:\Users\user\source\repos\current_task\aquaUtils\ArrayUtils.c(22,22): warning C4133: функция: несовместимые типы - из "int **" в "char **"
+  DebugUtils.c
+  FileUtils.c
+C:\Users\user\source\repos\current_task\aquaUtils\FileUtils.c(31,43): warning C4098: readAllLines_s: функция типа "void", возвращающая значение
+C:\Users\user\source\repos\current_task\aquaUtils\FileUtils.c(35,39): warning C4047: =: "int" отличается по уровням косвенного обращения от "char *"
+  StringUtils.c
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(107,10): warning C4013: va_start: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(109,8): warning C4013: va_end: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(180,20): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(181,19): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(181,59): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(189,18): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(190,17): warning C4090: функция: разные квалификаторы "const"
+C:\Users\user\source\repos\current_task\aquaUtils\StringUtils.c(190,57): warning C4090: функция: разные квалификаторы "const"
+  ExtendedTypes.c
+  main.c
+C:\Users\user\source\repos\current_task\Lab2\Lab2\Matrices.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+  Matrices.c
+C:\Users\user\source\repos\current_task\Lab2\Lab2\Matrices.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.17763.0\shared\winerror.h(950,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
+C:\Users\user\source\repos\current_task\aquaUtils\FileUtils.h(13): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
+C:\Users\user\source\repos\current_task\Lab2\Lab2\Matrices.c(13,51): warning C4133: =: несовместимые типы - из "int **" в "double **"
+StringUtils.obj : error LNK2001: неразрешенный внешний символ va_start.
+StringUtils.obj : error LNK2001: неразрешенный внешний символ va_end.
+C:\Users\user\source\repos\current_task\Lab2\x64\Release\Lab2.exe : fatal error LNK1120: неразрешенных внешних элементов: 2
