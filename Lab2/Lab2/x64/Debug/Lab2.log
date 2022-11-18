@@ -1,3 +1,13 @@
-﻿  main.c
-C:\Users\user\source\repos\current_task\Lab2\Lab2\Matrices.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-  Lab2.vcxproj -> C:\Users\user\source\repos\current_task\Lab2\x64\Debug\Lab2.exe
+﻿  DirectoryUtils.c
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\DirectoryUtils.c(7,6): warning C4013: getcwd: нет определения; предполагается "extern" с возвратом типа "int"
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\DirectoryUtils.c(11,49): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\DirectoryUtils.c(23,55): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\DirectoryUtils.c(62,36): warning C4133: функция: несовместимые типы - из "wchar_t [2048]" в "const char *"
+  main.c
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\Matrices.h(2,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\MatrixIO.h(62,29): warning C4133: =: несовместимые типы - из "void **" в "double **"
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(954,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
+C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.h(13,1): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
+  Создание кода...
+C:\Users\aquahaze\source\current_task\Lab2\Lab2\DirectoryUtils.c(76): warning C4172: возвращение адреса локальной или временной переменной : wcs
+  Lab2.vcxproj -> C:\Users\aquahaze\source\current_task\Lab2\x64\Debug\Lab2.exe

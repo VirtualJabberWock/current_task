@@ -10,6 +10,7 @@ void InitMatrix(Matrix* m, int w, int h)
     m->__notnull__ = true;
     m->h = h;
     m->w = w;
+    if (m->matrix != 0) free(m->matrix);
     m->matrix = (double**)initArray(h, sizeof(void*));
     for (int i = 0; i < h; i++) {
         m->matrix[i] = (double*)initArray(w, sizeof(double));
@@ -39,8 +40,8 @@ void MatrixFrom5x5(Matrix* m, double A[5][5]) {
 
 errno_t MatrixAddition(Matrix* l, Matrix* r, Matrix* out)
 {
-    if (l->__notnull__ == false) panic_NPE();
-    if (r->__notnull__ == false) panic_NPE();
+    if (l->__notnull__ == false) return MATRIX_ERR_LEFT_REQUIRED;
+    if (r->__notnull__ == false) return MATRIX_ERR_RIGHT_REQUIRED;
     if (out->__notnull__ == 0) panic_NPE();
 
     if (!_MatrixCheckForSameSize(r, l)) return MATRIX_ERR_DIFFRENT_SIZES;
@@ -57,6 +58,7 @@ errno_t MatrixAddition(Matrix* l, Matrix* r, Matrix* out)
 errno_t MatrixSubstract(Matrix* l, Matrix* r, Matrix* out)
 {
     if (out->__notnull__ == False) panic_NPE();
+    if (r->__notnull__ == False) return MATRIX_ERR_RIGHT_REQUIRED;
     if (!_MatrixCheckForSameSize(r, out)) return MATRIX_ERR_INVALID_OUT;
 
     int s = MatrixCopy(r, out);
@@ -84,6 +86,7 @@ double MatrixGetDeterminant(Matrix* A)
 
 errno_t MatrixFactor(Matrix* l, double alpha, Matrix* out)
 {
+    if(l->__notnull__ == 0) return MATRIX_ERR_LEFT_REQUIRED;
     for (int i = 0; i < l->h; i++) {
         for (int j = 0; j < l->w; j++) {
             out->matrix[i][j] = l->matrix[i][j] * alpha;
@@ -94,16 +97,16 @@ errno_t MatrixFactor(Matrix* l, double alpha, Matrix* out)
 
 errno_t MatrixMultiply(Matrix* l, Matrix* r, Matrix* out)
 {
-    if (l->__notnull__ == false) panic_NPE();
-    if (r->__notnull__ == false) panic_NPE();
+    if (l->__notnull__ == false) return MATRIX_ERR_LEFT_REQUIRED;
+    if (r->__notnull__ == false) return MATRIX_ERR_RIGHT_REQUIRED;
     if (out->__notnull__ == 0) panic_NPE();
 
     if (l->w != r->h) return MATRIX_ERR_INVALID_MULTIPLY;   
     if (l->h != out->h) return MATRIX_ERR_INVALID_OUT;
     if (r->w != out->w) return MATRIX_ERR_INVALID_OUT;
 
-    for (int i = 0; i < r->h; i++) {
-        for (int j = 0; j < l->w; j++) {
+    for (int i = 0; i < out->h; i++) {
+        for (int j = 0; j < out->w; j++) {
             double c = 0;
             for (int inner = 0; inner < l->h; inner++) {
                 c += r->matrix[i][inner] * l->matrix[inner][j];
@@ -118,6 +121,7 @@ errno_t MatrixMultiply(Matrix* l, Matrix* r, Matrix* out)
 /* @param NP - NULL POINTER (0) */
 errno_t MatrixTranspose(Matrix* A, Matrix* NP, Matrix* out)
 {
+    if(A->__notnull__ == False) return MATRIX_ERR_LEFT_REQUIRED;
     for (int i = 0; i < A->h; i++) {
         for (int j = 0; j < A->w; j++) {
             out->matrix[i][j] = A->matrix[j][i];
@@ -129,6 +133,7 @@ errno_t MatrixTranspose(Matrix* A, Matrix* NP, Matrix* out)
 /* @param NP - NULL POINTER (0) */
 errno_t MatrixDeterminate(Matrix* A, Matrix* NP, Matrix* out)
 {
+    if (A->__notnull__ == False) return MATRIX_ERR_LEFT_REQUIRED;
     if (A->h != A->w) return MATRIX_ERR_NOT_SQUARE;
     out->matrix[0][0] = MatrixGetDeterminant(A);
     return 0;
@@ -148,19 +153,30 @@ errno_t MatrixCopy(Matrix* from, Matrix* to)
     return 0;
 }
 
-void MatrixErrorHandler(int status)
+
+error_msg_t MatrixErrorHandler(int status)
 {
-    if (status == 0) return;
-    if (status == MATRIX_ERR_DIFFRENT_SIZES)
-        panic("Matrices :: Invalid operation! (Matrices have diffrent sizes)");
-    if (status == MATRIX_ERR_INVALID_OUT)
-        panic("Matrices :: Invalid operation! (Output matrix should valid size)");
-    if (status == MATRIX_ERR_INVALID_MULTIPLY)
-        panic("Matrices :: Invalid operation! (For multiply, expected sizes: (nxm) * (mxq)");
-    if (status == MATRIX_ERR_INVALID_COPY)
-        panic("Matrices :: Invalid operation! (Can't copy matrix to matrix with diffrent size)");
-    if (status == MATRIX_ERR_NOT_SQUARE)
-        panic("Matrices :: Invalid operation! (Matrix should have square size)");
+    if (status == 0) return NULL;
+
+    switch (status) {
+    
+    case MATRIX_ERR_DIFFRENT_SIZES:
+        return "Matrices :: Invalid operation! (Matrices have diffrent sizes)";
+    case MATRIX_ERR_INVALID_OUT:
+        return "Matrices :: Invalid operation! (Output matrix should valid size)";
+    case MATRIX_ERR_INVALID_MULTIPLY:
+        return "Matrices :: Invalid operation! (For multiply, expected sizes: (nxm) * (mxq)";
+    case MATRIX_ERR_INVALID_COPY:
+        return "Matrices :: Invalid operation! (Can't copy matrix to matrix with diffrent size)";
+    case MATRIX_ERR_NOT_SQUARE:
+        return "Matrices :: Invalid operation! (Matrix should have square size)";
+    case MATRIX_ERR_LEFT_REQUIRED:
+        return "Matrices :: Operation require left matrix, which was NULL!";
+    case MATRIX_ERR_RIGHT_REQUIRED:
+        return "Matrices :: Operation require right matrix, which was NULL!";
+    }
+
+    return "Matrices :: Unknown error";
 }
 
 Bool _MatrixCheckForSameSize(Matrix* A, Matrix* B)
@@ -174,7 +190,7 @@ Bool _MatrixCheckForSameSize(Matrix* A, Matrix* B)
 * only for square matrices [Note: a(ij) < 100]
 * # - for format
 */
-void MatrixSmartPrint(string format, int c, ...) {
+Bool MatrixSmartPrint(string format, int c, ...) {
     int i = 0;
     StringV sv; InitStringV(&sv);
     sv.ptr = SUS_split(format, '#', &sv.size);
@@ -189,14 +205,14 @@ void MatrixSmartPrint(string format, int c, ...) {
         arr[j].h = tmp->h;
         arr[j].w = tmp->w;
         if (tmp->h != tmp->w)
-            panic("MatrixSmartPrint :: Can't print not square matrix!");
+            return (!printf("MatrixSmartPrint :: Can't DISPLAY not square matrix!"));
         arr[j].matrix = tmp->matrix;
         if (last_size == -1) {
             last_size = arr[j].h;
             continue;
         }
         if (last_size != arr[j].h)
-            panic("MatrixSmartPrint :: Every matrix should have same size!");
+            return (!printf("MatrixSmartPrint :: Every matrix should have same size!"));
     }
     for (int j = 0; j < last_size; j++) {
         for (int k = 0; k < c + 1; k++) {
@@ -214,5 +230,5 @@ void MatrixSmartPrint(string format, int c, ...) {
         printf("\n");
     }
     va_end(ap);
-    return;
+    return True;
 }

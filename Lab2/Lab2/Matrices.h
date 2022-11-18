@@ -8,6 +8,8 @@
 #define MATRIX_ERR_INVALID_MULTIPLY 0x102
 #define MATRIX_ERR_INVALID_COPY 0x103
 #define MATRIX_ERR_NOT_SQUARE 0x104
+#define MATRIX_ERR_LEFT_REQUIRED 0x105
+#define MATRIX_ERR_RIGHT_REQUIRED 0x106
 
 typedef struct tagMatrix {
     
@@ -36,13 +38,13 @@ double MatrixGetDeterminant(Matrix* A);
 errno_t MatrixFactor(Matrix* l, double alpha, Matrix* out);
 errno_t MatrixCopy(Matrix* from, Matrix* to);
 
-
-void MatrixErrorHandler(int status);
+/* @return NULL - if there no errors*/
+error_msg_t MatrixErrorHandler(int status);
 
 /*1 - if matrices have same size*/
 Bool _MatrixCheckForSameSize(Matrix* A, Matrix* B);
 
-void MatrixSmartPrint(
+Bool MatrixSmartPrint(
     string format, int c, ...
 );
 
