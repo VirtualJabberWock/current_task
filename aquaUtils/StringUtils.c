@@ -1,7 +1,8 @@
 #include "StringUtils.h"
 #include "ArrayUtils.h"
+#include <stdarg.h>
 
-string SUS_clearDublicateSpaces(string str)
+string_t SUS_clearDublicateSpaces(string_t str)
 {
 	int i = 0;
 	CharList buf = initArray(1, sizeof(char));
@@ -16,7 +17,7 @@ string SUS_clearDublicateSpaces(string str)
 	return buildString(buf, buf_len);
 }
 
-int SUS_getStringLength(string str)
+int SUS_getStringLength(string_t str)
 {
 	int i = 0;
 	while (str[i] != '\0') {
@@ -26,7 +27,7 @@ int SUS_getStringLength(string str)
 	return i;
 }
 
-int SUS_isStringNumber(string str) {
+int SUS_isStringNumber(string_t str) {
 	int i = 0;
 	if (str[0] == '-') i++;
 	while (str[i] != '\0') {
@@ -36,7 +37,7 @@ int SUS_isStringNumber(string str) {
 	return 0;
 }
 
-int SUS_parseInteger32(string str, __int32 *out)
+int SUS_parseInteger32(string_t str, __int32 *out)
 {
 	int l = 0;
 	__int64 result = 0;
@@ -65,7 +66,7 @@ int SUS_parseInteger32(string str, __int32 *out)
 	return 0;
 }
 
-string SUS_str_c(string str1, string str2) {
+string_t SUS_str_c(string_t str1, string_t str2) {
 	int i = 0;
 	CharList buf = initArray(1, sizeof(char));
 	int buf_len = 0;
@@ -78,7 +79,7 @@ string SUS_str_c(string str1, string str2) {
 	return buildString(buf, buf_len);
 }
 
-string SUS_str_f(string format, string str2) {
+string_t SUS_str_f(string_t format, string_t str2) {
 	int i = 0;
 	CharList buf = initArray(0, sizeof(char));
 	buf[0] = '\0';
@@ -99,7 +100,18 @@ string SUS_str_f(string format, string str2) {
 	return buildString(buf, buf_len);
 }
 
-void SUS_str_unlock(string const_str, int* out_len, CharList* out_buffer)
+string_t SUS_format1024(string_t format, ...)
+{
+	va_list arg;
+	char* buffer = initArray(1024, sizeof(char));
+	/* Write the error message */
+	va_start(arg, format);
+	vsprintf_s(buffer, 1024, format, arg);
+	va_end(arg);
+	return buildString(buffer, 1024);
+}
+
+void SUS_str_unlock(string_t const_str, int* out_len, CharList* out_buffer)
 {
 	int i = 0;
 	int buf_len = 0;
@@ -109,7 +121,7 @@ void SUS_str_unlock(string const_str, int* out_len, CharList* out_buffer)
 	*out_len = buf_len;
 }
 
-string SUS_str_lock(char* buffer, int size)
+string_t SUS_str_lock(char* buffer, int size)
 {
 	char* buf0 = initArray(size + 1, sizeof(char));
 	for (int i = 0; i < size; i++) buf0[i] = buffer[i];
@@ -117,9 +129,9 @@ string SUS_str_lock(char* buffer, int size)
 	return buf0;
 }
 
-string SUS_str_bucket_assemble(string* bucket, int bsize, char delim)
+string_t SUS_str_bucket_assemble(string_t* bucket, int bsize, char delim)
 {
-	string s = "";
+	string_t s = "";
 	CharList megaBuffer = initArray(0, sizeof(char));
 	int megaBuffer_len = 0;
 	for (int i = 0; i < bsize; i++) {
@@ -132,7 +144,7 @@ string SUS_str_bucket_assemble(string* bucket, int bsize, char delim)
 	return buildString(megaBuffer, megaBuffer_len);
 }
 
-string SUS_str_copy(string str1) {
+string_t SUS_str_copy(string_t str1) {
 	int i = 0;
 	CharList buf = initArray(1, sizeof(char));
 	int buf_len = 0;
@@ -143,9 +155,9 @@ string SUS_str_copy(string str1) {
 }
 
 
-string SUS_trim(string str)
+string_t SUS_trim(string_t str)
 {
-	string str2 = SUS_clearDublicateSpaces(str);
+	string_t str2 = SUS_clearDublicateSpaces(str);
 	CharList buf = initArray(1, sizeof(char));
 	int buf_s = 0;
 	int str_len = SUS_getStringLength(str2);
@@ -156,8 +168,8 @@ string SUS_trim(string str)
 	return buildString(buf, buf_s);
 }
 
-string* SUS_split(string str, char delimiter, int* count) {
-	string* a = (string*) initBucket(1);
+string_t* SUS_split(string_t str, char delimiter, int* count) {
+	string_t* a = (string_t*) initBucket(1);
 	int bucket_s = 0;
 	int i = 0;
 	int start = 0, end = 0;

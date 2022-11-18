@@ -1,5 +1,5 @@
 #pragma once
-#define string const char*
+#define string_t const char*
 #define CharList char*
 
 #define F_Scan128 "%128[^\n\r]"
@@ -8,20 +8,21 @@
 
 // UTILS
 
-string SUS_clearDublicateSpaces(string str);
-int SUS_getStringLength(string str);
-int SUS_parseInteger32(string str, __int32* out);
-int SUS_isStringNumber(string str);
-string SUS_str_copy(string str1);
+string_t SUS_clearDublicateSpaces(string_t str);
+int SUS_getStringLength(string_t str);
+int SUS_parseInteger32(string_t str, __int32* out);
+int SUS_isStringNumber(string_t str);
+string_t SUS_str_copy(string_t str1);
 
 // UTILS + STRING_BUILDER HELPERS
 
-string SUS_trim(string str);
-string* SUS_split(string, char delimiter, int* parts_count);
-string SUS_str_c(string str1, string str2);
-string SUS_str_f(string format, string str2);
-void SUS_str_unlock(string const_str, int* out_len, CharList* out_buffer);
-string SUS_str_lock(char* buffer, int size);
-string SUS_str_bucket_assemble(string* bucket, int bucket_size, char delim);
+string_t SUS_trim(string_t str);
+string_t* SUS_split(string_t, char delimiter, int* parts_count);
+string_t SUS_str_c(string_t str1, string_t str2);
+string_t SUS_str_f(string_t format, string_t str2);
+string_t SUS_format1024(string_t format, ...);
+void SUS_str_unlock(string_t const_str, int* out_len, CharList* out_buffer);
+string_t SUS_str_lock(char* buffer, int size);
+string_t SUS_str_bucket_assemble(string_t* bucket, int bucket_size, char delim);
 
 //a

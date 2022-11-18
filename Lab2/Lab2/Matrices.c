@@ -27,6 +27,16 @@ void MatrixFrom3x3(Matrix* m, double A[3][3])
     }
 }
 
+void MatrixFrom5x5(Matrix* m, double A[5][5]) {
+    if (m->h != 5) panic("Can't create 5x5 matrix given nxm, where n != 5");
+    if (m->w != 5) panic("Can't create 5x5 matrix given nxm, where m != 5");
+    for (int i = 0; i < 5; i++) {
+        for (int j = 0; j < 5; j++) {
+            m->matrix[i][j] = A[i][j];
+        }
+    }
+}
+
 errno_t MatrixAddition(Matrix* l, Matrix* r, Matrix* out)
 {
     if (l->__notnull__ == false) panic_NPE();
@@ -155,8 +165,8 @@ void MatrixErrorHandler(int status)
 
 Bool _MatrixCheckForSameSize(Matrix* A, Matrix* B)
 {
-    if (A->h != A->h) return False;
-    if (A->w != A->w) return False;
+    if (A->h != B->h) return False;
+    if (A->w != B->w) return False;
     return True;
 }
 
@@ -189,8 +199,8 @@ void MatrixSmartPrint(string format, int c, ...) {
             panic("MatrixSmartPrint :: Every matrix should have same size!");
     }
     for (int j = 0; j < last_size; j++) {
-        for (int k = 0; k < c; k++) {
-            if (j != c / 2) {
+        for (int k = 0; k < c + 1; k++) {
+            if (j != last_size / 2) {
                 for (int i = 0; i < SUS_getStringLength(sv.ptr[k]); i++) printf(" ");
             }
             else {
@@ -198,7 +208,7 @@ void MatrixSmartPrint(string format, int c, ...) {
             }
             printf(" ");
             for (int i = 0; i < last_size; i++) {
-                printf("%2d  ", (int)arr[k].matrix[j][i]);
+                if(k != c) printf("%2d  ", (int)arr[k].matrix[j][i]);
             }
         }
         printf("\n");

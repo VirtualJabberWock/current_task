@@ -22,6 +22,7 @@ void InitMatrix(Matrix* m, int w, int h);
 
 /*For debugging purposes*/
 void MatrixFrom3x3(Matrix* m, double A[3][3]);
+void MatrixFrom5x5(Matrix* m, double A[5][5]);
 
 errno_t MatrixAddition(Matrix* l, Matrix* r, Matrix* out);
 errno_t MatrixSubstract(Matrix* l, Matrix* r, Matrix* out);
