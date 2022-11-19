@@ -82,6 +82,8 @@ void ScanMatrixFromFile(Matrix *out, string_t filename) {
         int wsize = 0;
         for (int j = 0; j < tmp.size; j++) {
             double tmp2 = 0;
+            if (strstr(tmp.ptr[j], "n") != 0) return; // NOT A NUMBER
+            if (SUS_getStringLength(tmp.ptr[j]) > 24) return; // MAX 10^24
             int status = sscanf_s(tmp.ptr[j], "%lf", &tmp2);
             if (status == 0) return;
             putToDoubleArray(&temp, &wsize, tmp2);
@@ -89,7 +91,7 @@ void ScanMatrixFromFile(Matrix *out, string_t filename) {
         pushToBucket(&tmp_matrix, &out->h, temp);
         tmp.clear(&tmp);
     }
-    out->matrix = tmp_matrix;
+    out->matrix = (double**)tmp_matrix;
     out->w = first_size;
     out->__notnull__ = 1;
     sv.clear(&sv);

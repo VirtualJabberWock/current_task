@@ -224,7 +224,7 @@ Bool MatrixSmartPrint(string format, int c, ...) {
             }
             printf(" ");
             for (int i = 0; i < last_size; i++) {
-                if(k != c) printf("%2d  ", (int)arr[k].matrix[j][i]);
+                if(k != c) printf("%2.1lf  ", arr[k].matrix[j][i]);
             }
         }
         printf("\n");

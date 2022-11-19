@@ -119,6 +119,8 @@ int loadMatrixFromFile(Matrix* ptr, const char** info)
     else {
         system("cls");
         printf("\n\n\tError: Invalid Matrix! Now matrix is NULL\n\n");
+        printf("\n\n\tPossible causes:\n\t\t* Number bigger than max supported value (10^24)");
+        printf("\n\t\t* Not a Number\n\t\t* invalid matrix size\n");
         *info = "NULL";
         system("pause");
     }
