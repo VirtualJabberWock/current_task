@@ -35,3 +35,4 @@ C:\Users\user\source\repos\current_task\Lab2\Lab2\Matrices.c(13,51): warning C41
 StringUtils.obj : error LNK2001: неразрешенный внешний символ va_start.
 StringUtils.obj : error LNK2001: неразрешенный внешний символ va_end.
 C:\Users\user\source\repos\current_task\Lab2\x64\Release\Lab2.exe : fatal error LNK1120: неразрешенных внешних элементов: 2
+0
