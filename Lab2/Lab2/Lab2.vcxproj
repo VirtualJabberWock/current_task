@@ -42,13 +42,13 @@
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
     <ConfigurationType>Application</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
-    <PlatformToolset>v142</PlatformToolset>
+    <PlatformToolset>v143</PlatformToolset>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
   </PropertyGroup>
@@ -135,6 +135,7 @@
     <ClInclude Include="..\..\aquaUtils\StringUtils.h" />
     <ClInclude Include="BareissAlgorithm.h" />
     <ClInclude Include="bool.h" />
+    <ClInclude Include="DirectoryUtils.h" />
     <ClInclude Include="ExtendedTypes.h" />
     <ClInclude Include="Matrices.h" />
     <ClInclude Include="MatrixCalculator.h" />
@@ -146,6 +147,7 @@
     <ClCompile Include="..\..\aquaUtils\DebugUtils.c" />
     <ClCompile Include="..\..\aquaUtils\FileUtils.c" />
     <ClCompile Include="..\..\aquaUtils\StringUtils.c" />
+    <ClCompile Include="DirectoryUtils.c" />
     <ClCompile Include="ExtendedTypes.c" />
     <ClCompile Include="main.c" />
     <ClCompile Include="Matrices.c" />
