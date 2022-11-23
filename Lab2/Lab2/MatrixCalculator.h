@@ -30,4 +30,3 @@ Bool handleMatrixOperation(Matrix* A, Matrix* B, Matrix* out, char o) {
     _MatrixDisplayResult(A, B, out, func_id);
     return True;
 }
-
