@@ -14,6 +14,9 @@ int SUS_parseInteger32(string_t str, __int32* out);
 int SUS_isStringNumber(string_t str);
 string_t SUS_str_copy(string_t str1);
 
+/*@return 1 - if [str] goes earlier [next] in (ASCII) comparison*/
+char SUS_alphabetCompare(string_t str, string_t next);
+
 // UTILS + STRING_BUILDER HELPERS
 
 string_t SUS_trim(string_t str);
@@ -25,4 +28,3 @@ void SUS_str_unlock(string_t const_str, int* out_len, CharList* out_buffer);
 string_t SUS_str_lock(char* buffer, int size);
 string_t SUS_str_bucket_assemble(string_t* bucket, int bucket_size, char delim);
 
-//a

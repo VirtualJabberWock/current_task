@@ -1,0 +1,90 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Исходные файлы">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;c++;cppm;ixx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Файлы заголовков">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hh;hpp;hxx;h++;hm;inl;inc;ipp;xsd</Extensions>
+    </Filter>
+    <Filter Include="Файлы ресурсов">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="aquaUtils">
+      <UniqueIdentifier>{5f54df4f-ef22-4e3f-9e4a-4ad0ea5fa19c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="aquaUtils\dataStructs">
+      <UniqueIdentifier>{b6dba559-7874-437a-b6d4-6df944037ef6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="aquaUtils\utils">
+      <UniqueIdentifier>{2062bfef-ada1-4b4e-994a-c3333acc9d17}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="main.c">
+      <Filter>Исходные файлы</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\AquaTypes.c">
+      <Filter>aquaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\ExtendedTypes.c">
+      <Filter>aquaUtils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\dataStructs\LinkedList.c">
+      <Filter>aquaUtils\dataStructs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\dataStructs\List.c">
+      <Filter>aquaUtils\dataStructs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\BasicDataStructs.c">
+      <Filter>aquaUtils\dataStructs</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\ArrayUtils.c">
+      <Filter>aquaUtils\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\DebugUtils.c">
+      <Filter>aquaUtils\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\FileUtils.c">
+      <Filter>aquaUtils\utils</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\aquaUtils\StringUtils.c">
+      <Filter>aquaUtils\utils</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\aquaUtils\AquaTypes.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\ExtendedTypes.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\pch.h">
+      <Filter>aquaUtils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\dataStructs\LinkedList.h">
+      <Filter>aquaUtils\dataStructs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\dataStructs\List.h">
+      <Filter>aquaUtils\dataStructs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\BasicDataStructs.h">
+      <Filter>aquaUtils\dataStructs</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\DebugUtils.h">
+      <Filter>aquaUtils\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\ArrayUtils.h">
+      <Filter>aquaUtils\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\FileUtils.h">
+      <Filter>aquaUtils\utils</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\aquaUtils\StringUtils.h">
+      <Filter>aquaUtils\utils</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

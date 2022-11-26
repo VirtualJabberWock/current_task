@@ -1,9 +1,0 @@
-﻿  main.c
-C:\Users\aquahaze\source\current_task\Class11\Class11\main.c(18,33): warning C4047: функция: "char *" отличается по уровням косвенного обращения от "const char *[512]"
-C:\Users\aquahaze\source\current_task\Class11\Class11\main.c(18,30): warning C4024: gets_s: различные типы для формального и фактического параметров 1
-  Создание кода
-  1 of 10 functions (10.0%) were compiled, the rest were copied from previous compilation.
-    0 functions were new in current compilation
-    0 functions had inline decision re-evaluated but remain unchanged
-  Создание кода завершено
-  Class11.vcxproj -> C:\Users\aquahaze\source\current_task\Class11\x64\Release\Task2.exe

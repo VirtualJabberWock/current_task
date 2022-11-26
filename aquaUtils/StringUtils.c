@@ -154,6 +154,19 @@ string_t SUS_str_copy(string_t str1) {
 	return buildString(buf, buf_len);
 }
 
+char SUS_alphabetCompare(string_t str, string_t next)
+{
+	int str_len = SUS_getStringLength(str);
+	int next_len = SUS_getStringLength(next);
+	int len = max(str_len, next_len);
+	for (int i = 0; i < len; i++) {
+		if (str[i] == next[i]) continue;
+		else return (str[i] < next[i]);
+	}
+	return (str_len <= next_len); // 1."ab" 2."abc" 3."abcd" ...
+	//also bet on the [str] so as not to do swap
+}
+
 
 string_t SUS_trim(string_t str)
 {

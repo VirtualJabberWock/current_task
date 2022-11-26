@@ -1,24 +1,24 @@
 #include "FileUtils.h"
 
-int openFile(FILE** hFile, string filename) {
+int openFile(FILE** hFile, string_t filename) {
     return fopen_s(hFile, filename, "r");
 }
 
-void openFile_s(FILE** hFile, string filename) {
+void openFile_s(FILE** hFile, string_t filename) {
     setTemp(FILENNAME_CHANNEL, filename);
     handleIOError(fopen_s(hFile, filename, "r"), "OPEN_FILE_ERROR: ");
 }
 
-void openFileText_s(FILE** hFile, string filename) {
+void openFileText_s(FILE** hFile, string_t filename) {
     setTemp(FILENNAME_CHANNEL, filename);
     handleIOError(fopen_s(hFile, filename, "rt"), "OPEN_FILE_ERROR: ");
 }
 
-void openFileW_s(FILE** hFile, string filename) {
+void openFileW_s(FILE** hFile, string_t filename) {
     handleIOError(fopen_s(hFile, filename, "w"), "OPEN_FILE_ERROR: ");
 }
 
-int openFileW(FILE** hFile, string filename) {
+int openFileW(FILE** hFile, string_t filename) {
     return fopen_s(hFile, filename, "w");
 }
 
@@ -65,7 +65,7 @@ void writeAllLines_s(FILE* hFile, StringV* lines)
 }
 
 
-void handleIOError(int status, string msg) {
+void handleIOError(int status, string_t msg) {
     if (status == STATUS_SUCCESS) {
         return;
     }

@@ -88,7 +88,7 @@ void InitDoubleV(DoubleV* v)
 	v->ptr = initArray(0, sizeof(double));
 }
 
-void InitStringBuilder(StringBuilder* builder, string base_nt)
+void InitStringBuilder(StringBuilder* builder, string_t base_nt)
 {
 	builder->buffer = initArray(0, sizeof(char));
 	builder->b_size = 0;
@@ -137,9 +137,9 @@ void Storage_PutLong(__self, __int64 value)
 	putTo64Array(&(self->_data64.ptr), &(self->_data64.size), value);
 }
 
-void Storage_PutString(__self, string value)
+void Storage_PutString(__self, string_t value)
 {
-	string a = SUS_str_copy(value);
+	string_t a = SUS_str_copy(value);
 	pushToBucket(&(self->_dataSB.ptr), &(self->_dataSB.size), a);
 }
 
@@ -160,9 +160,9 @@ void _Default_Vector_PutLong(LongV* v, __int64 value)
 	putTo64Array(&(v->ptr), &(v->size), value);
 }
 
-void _Default_Vector_PutString(StringV* v, string value)
+void _Default_Vector_PutString(StringV* v, string_t value)
 {
-	string a = SUS_str_copy(value);
+	string_t a = SUS_str_copy(value);
 	pushToBucket(&(v->ptr), &(v->size), a);
 }
 
@@ -174,9 +174,9 @@ void _Default_Vector_PutDouble(DoubleV* v, double value)
 // CLEAR
 
 void Storage_ClearInt(__self) { _Default_Vector_ClearInt(&(self->_data32)); }
-void Storage_ClearLong(__self) { _Default_Vector_ClearLong(&(self->_data64)); }
-void Storage_ClearString(__self) { _Default_Vector_ClearString(&(self->_dataSB)); }
-void Storage_ClearDouble(__self) { _Default_Vector_ClearDouble(&(self->_dataDV)); }
+void Storage_ClearLong(__self) { _Default_Vector_ClearInt(&(self->_data64)); }
+void Storage_ClearString(__self) { _Default_Vector_ClearInt(&(self->_dataSB)); }
+void Storage_ClearDouble(__self) { _Default_Vector_ClearInt(&(self->_dataDV)); }
 
 void _Default_Vector_ClearInt(IntV* v)
 {
@@ -203,8 +203,9 @@ void _Default_Vector_ClearString(StringV* v)
 	v->size = 0;
 }
 
-StringBuilder* _Default_SB_Append(StringBuilder* sb, string str) {
-	if (sb->buffer == 0) panic_NPE();
+StringBuilder* _Default_SB_Append(StringBuilder* sb, string_t str) {
+	if (sb->buffer == 0)
+		panic_NPE(_Default_SB_Append, "<char*> sb->buffer");
 	int i = 0;
 	while (str[i] != '\0') {
 		pushToCharArray(&(sb->buffer), &(sb->b_size), str[i]);
@@ -214,18 +215,21 @@ StringBuilder* _Default_SB_Append(StringBuilder* sb, string str) {
 }
 
 void _Default_SB_Trim(StringBuilder* sb) {
-	if (sb->buffer == 0) panic_NPE();
+	if (sb->buffer == 0)
+		panic_NPE(_Default_SB_Trim, "<char*> sb->buffer");
 	sb->buffer = SUS_trim(sb->buffer);
 }
 
-string _Default_SB_Build(StringBuilder* sb) {
-	if (sb->buffer == 0) panic_NPE();
+string_t _Default_SB_Build(StringBuilder* sb) {
+	if (sb->buffer == 0)
+		panic_NPE(_Default_SB_Build, "<char*> sb->buffer");
 	return SUS_str_lock(sb->buffer, sb->b_size);
 }
 
-string _Default_SB_BuildAndDispose(StringBuilder* sb) {
-	if (sb->buffer == 0) panic_NPE();
-	string r = buildString(sb->buffer, sb->b_size);
+string_t _Default_SB_BuildAndDispose(StringBuilder* sb) {
+	if (sb->buffer == 0)
+		panic_NPE(_Default_SB_BuildAndDispose, "<char*> sb->buffer");
+	string_t r = buildString(sb->buffer, sb->b_size);
 	sb->buffer = initArray(0, sizeof(char));
 	sb->b_size = 0;
 	return r;

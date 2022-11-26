@@ -1,0 +1,66 @@
+﻿  AquaTypes.c
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(23,37): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(61,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(143,61): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(166,39): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(177,75): warning C4133: функция: несовместимые типы - из "LongV *" в "IntV *"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(178,77): warning C4133: функция: несовместимые типы - из "StringV *" в "IntV *"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(179,77): warning C4133: функция: несовместимые типы - из "DoubleV *" в "IntV *"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(202,24): warning C4133: =: несовместимые типы - из "void **" в "const char **"
+C:\Users\aquahaze\source\current_task\aquaUtils\AquaTypes.c(220,35): warning C4090: =: разные квалификаторы "const"
+  ArrayUtils.c
+C:\Users\aquahaze\source\current_task\aquaUtils\ArrayUtils.c(22,22): warning C4133: функция: несовместимые типы - из "int **" в "char **"
+  BasicDataStructs.c
+  LinkedList.c
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(43,72): warning C4047: return: "c_node *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(76,71): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(85,5): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(93,74): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(109,5): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(125,73): warning C4098: LinkedListDisplay: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(133,75): warning C4098: ForEachInLinkedList: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(143,71): warning C4028: формальный параметр 3 отличается от объявления
+  List.c
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(23,64): warning C4098: _List_pushBack: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(51,65): warning C4098: _List_pushFront: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(73,60): warning C4047: return: "node *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(88,61): warning C4098: _List_clear: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(105,59): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(110,4): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(118,72): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(126,72): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(136,68): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(141,20): warning C4133: =: несовместимые типы - из "c_node *" в "node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(152,5): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(160,24): warning C4133: =: несовместимые типы - из "c_node *" в "node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(139,11): warning C4133: инициализация: несовместимые типы - из "tagNode *" в "c_node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(145,10): warning C4133: инициализация: несовместимые типы - из "node *" в "c_node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(174,25): warning C4133: функция: несовместимые типы - из "List *" в "tagSingleLinkedList *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(181,61): warning C4098: ListDisplay: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(189,63): warning C4098: ForEachInList: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(224,65): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(226,52): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(228,73): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+  DebugUtils.c
+C:\Users\aquahaze\source\current_task\aquaUtils\DebugUtils.c(41,21): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\DebugUtils.c(43,16): warning C4090: функция: разные квалификаторы "const"
+  ExtendedTypes.c
+  FileUtils.c
+C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.h(11,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
+C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(954,1): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
+C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.c(31,43): warning C4098: readAllLines_s: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.c(35,39): warning C4047: =: "int" отличается по уровням косвенного обращения от "char *"
+  StringUtils.c
+C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(194,20): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(195,59): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(203,18): warning C4090: функция: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\StringUtils.c(204,57): warning C4090: функция: разные квалификаторы "const"
+  main.c
+C:\Users\aquahaze\source\current_task\Class13\Class13\main.c(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\aquahaze\source\current_task\Class13\Class13\main.c(30,26): warning C4244: функция: преобразование "__int64" в "int", возможна потеря данных
+C:\Users\aquahaze\source\current_task\Class13\Class13\main.c(30,53): warning C4244: функция: преобразование "__int64" в "int", возможна потеря данных
+  Создание кода
+  Previous IPDB not found, fall back to full compilation.
+  All 17 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Создание кода завершено
+  Class13.vcxproj -> C:\Users\aquahaze\source\current_task\Class13\x64\Release\Class13.exe

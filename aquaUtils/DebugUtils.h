@@ -1,17 +1,21 @@
 #pragma once
 #include <stdio.h>
 #include <stdlib.h>
-#define string const char*
+#include <Windows.h>
+#define string_t const char*
 
-typedef const char* error_msg_t;
 
-void panic(string msg);
+static char isDgbHelpLoaded = 0;
+
+int panic(string_t msg);
+int panic_e(string_t class, string_t local, string_t msg);
 void h1dd3n_p4n1c();
-int panic_e(string msg);
-void panic_NPE();
+int panic_NPE(void* func, string_t obj);
 
 void printIntArray(int* array, int len);
-void setLastError(int channel, string value);
-string getLastError(int channel);
-void setTemp(int channel, string value);
-string getTemp(int channel);
+void setLastError(int channel, string_t value);
+string_t getLastError(int channel);
+void setTemp(int channel, string_t value);
+string_t getTemp(int channel);
+int isPositive(int n);
+

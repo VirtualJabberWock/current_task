@@ -2,7 +2,7 @@
 
 void* initArray(int size, int b_size)
 {
-	return (int*)calloc(size, b_size);
+	return (void*)calloc(size, b_size);
 }
 
 void expandIntArray(int** list, int new_size) {
@@ -98,7 +98,6 @@ void freeBucket(obj_ptr* bucket, int bucket_size) {
 	if (bucket == 0) return;
 	for (int i = 0; i < bucket_size; i++) {
 		if (bucket[i] == 0) break;
-		//TODO ERROR
 		free(bucket[i]);
 	}
 	if (bucket != 0) {
