@@ -133,8 +133,9 @@ ValueT _List_get(__SELF_List__, int id)
 ValueT _List_remove(__SELF_List__, int id)
 {
 	
-	if (self == 0) return panic_NPE(_LinkedList_remove, "<List> self");
+	if (self == 0) return panic_NPE(_List_remove, "<List> self");
 	if (id == 0) {
+		if (self->head == 0) return NULL;
 		ValueT tmp = COPY_VALUE_IF_NEEDED(self->head->value);
 		c_node* tmp2 = self->head->next;
 		free(self->head);
@@ -145,13 +146,13 @@ ValueT _List_remove(__SELF_List__, int id)
 	c_node* current = self->head;
 	c_node* previous = current;
 	for (int i = 0; i < id; i++) {
-		if (current == 0)
-			return panic_e(
-				LIST_CLASSNAME, "get(self, index)",
-				"element index is outside the bounds of the list"
-			);
 		previous = current;
 		current = current->next;
+		if (current == 0)
+			return panic_e(
+				LIST_CLASSNAME, "remove(self, index)",
+				"element index is outside the bounds of the list"
+			);
 	}
 	ValueT shadow = COPY_VALUE_IF_NEEDED(current->value);
 	previous->next = current->next;
@@ -161,7 +162,6 @@ ValueT _List_remove(__SELF_List__, int id)
 	}
 	self->size--;
 	return shadow;
-
 }
 
 void _List_dispose(List** self) {
@@ -171,7 +171,7 @@ void _List_dispose(List** self) {
 		"'l' param should be ptr to ptr, not ptr to structure!"
 		//todo memory scan
 	);
-	_LinkedList_clear(*self);
+	_List_clear(*self);
 	free(*self);
 	*self = 0;
 }

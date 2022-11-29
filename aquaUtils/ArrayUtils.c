@@ -19,7 +19,7 @@ void copyIntArray(int* from, int* to, int begin, int end) {
 
 void putToIntArray(int** list, int* size, int num)
 {
-	expandCharArray(list, (*size) + 1);
+	expandIntArray(list, (*size) + 1);
 	(*list)[(*size)] = num;
 	*size = *size + 1;
 }

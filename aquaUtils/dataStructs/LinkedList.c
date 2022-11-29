@@ -92,6 +92,7 @@ string_t _LinkedList_remove(__SELF_LinkedList__, int id)
 {
 	if (self == 0) return panic_NPE(_LinkedList_remove, "<LinkedList> self");
 	if (id == 0) {
+		if (self->head == 0) return NULL;
 		string_t tmp = SUS_str_copy(self->head->value);
 		c_node* tmp2 = self->head->next;
 		free(self->head);
@@ -102,13 +103,13 @@ string_t _LinkedList_remove(__SELF_LinkedList__, int id)
 	c_node* current = self->head;
 	c_node* previous = current;
 	for (int i = 0; i < id; i++) {
-		if (current == 0)
-			return panic_e(
-				LINKEDLIST_CLASSNAME, "get(self, index)",
-				"element index is outside the bounds of the list"
-			);
 		previous = current;
 		current = current->next;
+		if (current == 0)
+			return panic_e(
+				LINKEDLIST_CLASSNAME, "remove(self, index)",
+				"element index is outside the bounds of the list"
+			);
 	}
 	string_t shadow = SUS_str_copy(current->value);
 	previous->next = current->next;

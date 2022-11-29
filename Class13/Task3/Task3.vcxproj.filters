@@ -86,8 +86,5 @@
     <ClInclude Include="..\..\aquaUtils\StringUtils.h">
       <Filter>aquaUtils\utils</Filter>
     </ClInclude>
-    <ClInclude Include="IiIIIIiiiIIIiiIIIiiIiIiiI.h">
-      <Filter>Исходные файлы</Filter>
-    </ClInclude>
   </ItemGroup>
 </Project>
