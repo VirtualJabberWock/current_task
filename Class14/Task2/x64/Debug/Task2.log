@@ -1,0 +1,38 @@
+﻿  BasicDataStructs.c
+  LinkedList.c
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(43,72): warning C4047: return: "c_node *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(76,71): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(85,5): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(93,74): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(112,5): warning C4047: return: "const char *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(126,73): warning C4098: LinkedListDisplay: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(134,75): warning C4098: ForEachInLinkedList: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(144,71): warning C4028: формальный параметр 3 отличается от объявления
+  List.c
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(23,64): warning C4098: _List_pushBack: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(51,65): warning C4098: _List_pushFront: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(73,60): warning C4047: return: "node *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(88,61): warning C4098: _List_clear: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(105,59): warning C4047: return: "DataSet *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(110,4): warning C4047: return: "DataSet *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(118,72): warning C4047: return: "DataSet *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(126,72): warning C4047: return: "DataSet *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(136,62): warning C4047: return: "DataSet *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(139,16): warning C4133: функция: несовместимые типы - из "DataSet *" в "const char *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(142,20): warning C4133: =: несовместимые типы - из "c_node *" в "node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(155,5): warning C4047: return: "DataSet *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(161,24): warning C4133: =: несовместимые типы - из "c_node *" в "node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(139,10): warning C4090: инициализация: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(140,11): warning C4133: инициализация: несовместимые типы - из "tagNode *" в "c_node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(146,10): warning C4133: инициализация: несовместимые типы - из "node *" в "c_node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(157,9): warning C4090: инициализация: разные квалификаторы "const"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(181,61): warning C4098: ListDisplay: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(189,63): warning C4098: ForEachInList: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(224,65): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(226,52): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(228,73): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+  Создание кода...
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(131): warning C4715: _List_get: значение возвращается не при всех путях выполнения
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(72): warning C4715: _LinkedList_clear: значение возвращается не при всех путях выполнения
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\LinkedList.c(39): warning C4715: _LinkedList_pushBack: значение возвращается не при всех путях выполнения
+  Task2.vcxproj -> C:\Users\aquahaze\source\current_task\Class14\x64\Debug\Task2.exe

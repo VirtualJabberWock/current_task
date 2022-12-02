@@ -1,0 +1,4 @@
+﻿  main.c
+C:\Users\aquahaze\source\current_task\Class14\Task4\main.c(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
+C:\Users\aquahaze\source\current_task\Class14\Task4\main.c(25,29): warning C4018: <: несоответствие типов со знаком и без знака
+  Task4.vcxproj -> C:\Users\aquahaze\source\current_task\Class14\x64\Debug\Task4.exe

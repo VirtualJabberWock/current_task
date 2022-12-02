@@ -118,6 +118,7 @@ ValueT _List_get(__SELF_List__, int id)
 				return panic_e(LIST_CLASSNAME, "get(self, index)", "Invalid size!");
 			current = current->next;
 		}
+		return current->value;
 	}
 	else {
 		node* current = self->tail;
@@ -126,6 +127,7 @@ ValueT _List_get(__SELF_List__, int id)
 				return panic_e(LIST_CLASSNAME, "get(self, index)", "Invalid size!");
 			current = current->prev;
 		}
+		return current->value;
 	}
 	
 }
@@ -189,17 +191,19 @@ void ForEachInList(List* list, LIST_ITER_PROTOTYPE)
 	if (list == 0) return panic_NPE(ForEachInList, "<List> list");
 
 	node* current = list->head;
+	int id = 0;
 	while (current != 0)
 	{
-		next(current->value, (current->next != 0), list);
+		next(current->value, id, list);
 		current = current->next;
+		id++;
 	}
 }
 
-void __ListElementDisplay(ValueT element, Bool hasNext, List* ptr)
+void __ListElementDisplay(ValueT element, int id, List* ptr)
 {
-	printf(VALUE_DISPLAY_FORMAT, element);
-	if (hasNext) printf(", \n");
+	printf(VALUE_DISPLAY_FORMAT, element->str);
+	if (id != ptr->size-1) printf(", \n");
 }
 
 void _Private_SwapLinkedNodes(node* l, node* r)

@@ -3,13 +3,19 @@
 #include "../BasicDataStructs.h"
 
 // Easy to change value type
-#define ValueT const char*
-#define LIST_TYPE_NAME "String"
+#define ValueT DataSet*
+#define LIST_TYPE_NAME "DataSet"
 #define VALUE_DISPLAY_FORMAT "\t%s"
-#define isEQUAL(a,b) (strcmp(a,b) == 0)
-#define COMPARE_VALUES(a,b) SUS_alphabetCompare(a,b)
+#define isEQUAL(a,b) (strcmp(a->str,b->str) == 0)
+#define COMPARE_VALUES(a,b) (a->len > b->len)
 #define COPY_VALUE_IF_NEEDED(v) SUS_str_copy(v)
 //...............................
+
+typedef struct tagDataSet
+{
+	const char* str;
+	int len;
+} DataSet;
 
 typedef struct tagNode
 {
@@ -40,7 +46,7 @@ typedef struct tagList
 
 } List;
 
-#define LIST_ITER_PROTOTYPE void (*next)(ValueT value, Bool hasNext, List* ptr)
+#define LIST_ITER_PROTOTYPE void (*next)(ValueT value, int id, List* ptr)
 
 List* NewList();
 void ListBubbleSort(List* list, Bool ascending);
