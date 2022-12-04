@@ -2,13 +2,7 @@
 C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
 C:\Users\aquahaze\source\current_task\aquaUtils\FileUtils.h(11,1): warning C4005: ERROR_BUFFER_OVERFLOW: изменение макроопределения
 C:\Program Files (x86)\Windows Kits\10\Include\10.0.19041.0\shared\winerror.h(954,1): message : см. предыдущее определение "ERROR_BUFFER_OVERFLOW"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(44,57): warning C4047: return: "DataSet *" отличается по уровням косвенного обращения от "int"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(53,58): warning C4047: return: "FileData *" отличается по уровням косвенного обращения от "int"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(59,49): warning C4047: return: "FileData *" отличается по уровням косвенного обращения от "int"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(85,10): warning C4047: >: "int" отличается по уровням косвенного обращения от "int *"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(85,10): warning C4047: :: "int" отличается по уровням косвенного обращения от "int *"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(85,30): warning C4047: =: "int" отличается по уровням косвенного обращения от "int *"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(86,10): warning C4047: <: "int" отличается по уровням косвенного обращения от "int *"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(86,10): warning C4047: :: "int" отличается по уровням косвенного обращения от "int *"
-C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(86,30): warning C4047: =: "int" отличается по уровням косвенного обращения от "int *"
+C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(26,30): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(37,49): warning C4047: return: "FileData *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\Class14\Task5\main.c(42,35): warning C4047: return: "FileData *" отличается по уровням косвенного обращения от "int"
   Task5.vcxproj -> C:\Users\aquahaze\source\current_task\Class14\x64\Debug\Task5.exe

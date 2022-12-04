@@ -3,19 +3,13 @@
 #include "../BasicDataStructs.h"
 
 // Easy to change value type
-#define ValueT DataSet*
-#define LIST_TYPE_NAME "DataSet"
-#define VALUE_DISPLAY_FORMAT "\t%s"
-#define isEQUAL(a,b) (strcmp(a->str,b->str) == 0)
-#define COMPARE_VALUES(a,b) (a->len > b->len)
-#define COPY_VALUE_IF_NEEDED(v) SUS_str_copy(v)
+#define ValueT int
+#define LIST_TYPE_NAME "Integer"
+#define VALUE_DISPLAY_FORMAT "\t%d"
+#define isEQUAL(a,b) (a == b)
+#define COMPARE_VALUES(a,b) (a > b)
+#define COPY_VALUE_IF_NEEDED(v) v
 //...............................
-
-typedef struct tagDataSet
-{
-	const char* str;
-	int len;
-} DataSet;
 
 typedef struct tagNode
 {
@@ -62,7 +56,9 @@ ValueT _List_remove(__SELF_List__, int id);
 void ListDisplay(List* list, string_t name);
 void ForEachInList(List* list, LIST_ITER_PROTOTYPE);
 
-void __ListElementDisplay(ValueT element, Bool hasNext, List* ptr);
+void __ListElementDisplay(ValueT element, int id, List* ptr);
 
 void _Private_SwapLinkedNodes(node* left, node* right);
 void _Private_SwapNodes(List* l, node* left, node* right);
+
+void ListNodeRemove(List* l, node* node);

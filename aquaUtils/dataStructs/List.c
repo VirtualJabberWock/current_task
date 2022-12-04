@@ -153,7 +153,7 @@ ValueT _List_remove(__SELF_List__, int id)
 		if (current == 0)
 			return panic_e(
 				LIST_CLASSNAME, "remove(self, index)",
-				"element index is outside the bounds of the list"
+				SUS_format1024("element index{%d} is outside the bounds of the list{%d}", id, self->size)
 			);
 	}
 	ValueT shadow = COPY_VALUE_IF_NEEDED(current->value);
@@ -202,7 +202,7 @@ void ForEachInList(List* list, LIST_ITER_PROTOTYPE)
 
 void __ListElementDisplay(ValueT element, int id, List* ptr)
 {
-	printf(VALUE_DISPLAY_FORMAT, element->str);
+	printf(VALUE_DISPLAY_FORMAT, element);
 	if (id != ptr->size-1) printf(", \n");
 }
 
@@ -256,6 +256,28 @@ void _Private_SwapNodes(List* l, node* left, node* right)
 	else if (l->head == right) l->head = left;
 	if (l->tail == left) l->tail = right;
 	else if (l->tail == right) l->tail = left;
+}
+
+void ListNodeRemove(List* l, node* n)
+{
+	if (l == 0) {
+		panic_NPE(_List_remove, "<List> self");
+		return;
+	}
+	if (l->head == n) {
+		node* tmp2 = l->head->next;
+		free(n);
+		l->head = tmp2;
+		l->size--;
+	}
+	if (n == 0) return;
+	if (n->prev == 0) return;
+	n->prev->next = n->next;
+	if (n == l->tail) {
+		l->tail = n->prev;
+	}
+	free(n);
+	l->size--;
 }
 
 void ListBubbleSort(List* l, Bool descending)

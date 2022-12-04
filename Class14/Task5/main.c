@@ -1,41 +1,35 @@
 #include "../../aquaUtils/pch.h";
 #include "../../aquaUtils/FileUtils.h"
-
-void IntegerBubbleSort(int* arr, int n);
-void swap(int* a, int* b);
+#include "../../aquaUtils/BasicDataStructs.h"
 
 typedef struct tagFileData{
 	StringV* sv;
 	IntV* lengths;
+	List* lens_list;
 	int N;
 	int count;
 } FileData;
 
+int findMinimumFairLimit(List* l, int N);
 FileData* scanFromFile(string_t filename);
 
 int main() {
 	FileData* fdata = scanFromFile("input.txt");
-	IntV lengths_origin; InitIntV(&lengths_origin);
-	lengths_origin.ptr = initArray(fdata->lengths->size, sizeof(int));
-	copyIntArray(fdata->lengths->ptr, lengths_origin.ptr, 0, fdata->lengths->size);
-	//IntegerBubbleSort(lengths.ptr, lengths.size);
-	unsigned int filter_len = 0xffffffff;
-	//if (N != fdata->lengths) filter_len = 
+	printf("WORDS: %d, N = %d\n", fdata->lengths->size, fdata->N);
+	unsigned int len_filter = 0xffffffff;
+	if (fdata->N != fdata->count) {
+		len_filter = findMinimumFairLimit(fdata->lens_list, fdata->N);
+	}
+	printf("\n\nFILTER = %u\n\n", len_filter);
 	int c = 0;
 	for (int i = 0; i < fdata->sv->size; i++) {
-		if (lengths_origin.ptr[i] < filter_len) continue;
+		if (fdata->lengths->ptr[i] < len_filter) continue;
 		if (c >= fdata->N) break;
 		printf("%s ", fdata->sv->ptr[i]);
 		c++;
 	}
+	printf("\n\n");
 }
-
-void swap(int* a, int* b) {
-	int tmp = *a;
-	*a = *b;
-	*b = tmp;
-}
-
 
 FileData* scanFromFile(string_t filename)
 {
@@ -43,6 +37,7 @@ FileData* scanFromFile(string_t filename)
 	if (data == 0) return panic("Unexpected error");
 	data->sv = malloc(sizeof(StringV));
 	data->lengths = malloc(sizeof(IntV));
+	data->lens_list = NewList();
 	if ((data->sv == 0) || (data->lengths == 0))
 		return panic("Unexpected error");
 	InitStringV(data->sv); InitIntV(data->lengths);
@@ -56,16 +51,40 @@ FileData* scanFromFile(string_t filename)
 	if (data->N > data->sv->size) panic("Invalid request!");
 	closeFile(f);
 	for (int i = 0; i < data->sv->size; i++) {
-		data->lengths->put(data->lengths, SUS_getStringLength(data->sv->ptr[i]));
+		int len = SUS_getStringLength(data->sv->ptr[i]);
+		data->lengths->put(data->lengths, len);
+		data->lens_list->push(data->lens_list, len);
 	}
 	return data;
 }
 
-void IntegerBubbleSort(int* arr, int n)
+int findMinimumFairLimit(List* lens, int N)
 {
-	int i, j;
-	for (i = 0; i < n - 1; i++)
-		for (j = 0; j < n - i - 1; j++)
-			if (arr[j] < arr[j + 1])
-				swap(&arr[j], &arr[j + 1]);
+	int _n = N;
+	LongV nodeToRemove; InitLongV(&nodeToRemove);
+	nodeToRemove.put(&nodeToRemove, -1);
+	while (_n > 0) {
+		int _max = 0;
+		node* current = lens->head; 
+		printf("\nSEARCH :: ");
+		while (current != NULL) {
+			if (current->value > _max) {
+				_max = current->value;
+				nodeToRemove.ptr[0] = (__int64) current;
+				nodeToRemove.size = 1;
+				printf("m = %d, ", _max);
+			}else if(current->value == _max) {
+				nodeToRemove.put(&nodeToRemove, (__int64)current);
+			}
+			current = current->next;
+		}
+		_n -= nodeToRemove.size;
+		if (_n <= 0) return _max;
+		printf("FOUND = %d, _n = %d; [%d]\n", _max, _n, nodeToRemove.size);
+		for (int i = 0; i < nodeToRemove.size; i++) {
+			ListNodeRemove(lens, (node*)nodeToRemove.ptr[i]);
+		}
+		nodeToRemove.size = 1;
+	}
+	return 0;
 }

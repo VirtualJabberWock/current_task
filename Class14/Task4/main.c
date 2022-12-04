@@ -23,7 +23,7 @@ int main(int argc, string_t* argv) {
 		if (c >= N) break;
 		printf("%s ", argv[i+2]);
 		c++;
-	}
+	} 
 }
 
 void swap(int* a, int* b) {

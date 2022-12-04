@@ -1,4 +1,23 @@
-﻿  main.c
+﻿  List.c
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(23,64): warning C4098: _List_pushBack: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(51,65): warning C4098: _List_pushFront: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(73,60): warning C4047: return: "node *" отличается по уровням косвенного обращения от "int"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(88,61): warning C4098: _List_clear: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(140,35): warning C4047: return: "int" отличается по уровням косвенного обращения от "void *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(144,20): warning C4133: =: несовместимые типы - из "c_node *" в "node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(163,24): warning C4133: =: несовместимые типы - из "c_node *" в "node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(142,11): warning C4133: инициализация: несовместимые типы - из "tagNode *" в "c_node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(148,10): warning C4133: инициализация: несовместимые типы - из "node *" в "c_node *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(159,9): warning C4047: инициализация: "int" отличается по уровням косвенного обращения от "const char *"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(183,61): warning C4098: ListDisplay: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(185,42): warning C4113: "void (__cdecl *)(int,char,List *)" отличается в списках параметров от "void (__cdecl *)(int,int,List *)"
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(191,63): warning C4098: ForEachInList: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(203,47): warning C4028: формальный параметр 2 отличается от объявления
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(228,65): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(230,52): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+C:\Users\aquahaze\source\current_task\aquaUtils\dataStructs\List.c(232,73): warning C4098: _Private_SwapNodes: функция типа "void", возвращающая значение
+  main.c
 C:\Users\aquahaze\source\current_task\Class14\Task4\main.c(1,10): warning C4067: непредвиденные лексемы за директивой препроцессора, требуется newline
-C:\Users\aquahaze\source\current_task\Class14\Task4\main.c(25,29): warning C4018: <: несоответствие типов со знаком и без знака
+C:\Users\aquahaze\source\current_task\Class14\Task4\main.c(22,29): warning C4018: <: несоответствие типов со знаком и без знака
+  Создание кода...
   Task4.vcxproj -> C:\Users\aquahaze\source\current_task\Class14\x64\Debug\Task4.exe
